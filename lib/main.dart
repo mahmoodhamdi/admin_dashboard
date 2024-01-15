@@ -11,6 +11,9 @@ class AdminDashboard extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(title: 'Admin Dashboard', home: HomeView());
+    return MaterialApp(
+        title: 'Admin Dashboard',
+        theme: ThemeData(fontFamily: "Montserrat"),
+        home: const HomeView());
   }
 }
