@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 class AllExpensesItemHeader extends StatelessWidget {
-  const AllExpensesItemHeader({super.key, required this.image});
+  const AllExpensesItemHeader({super.key, required this.image, this.color});
   final String image;
+  final Color? color;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -19,7 +20,7 @@ class AllExpensesItemHeader extends StatelessWidget {
           child: Center(child: SvgPicture.asset(image)),
         ),
         const Expanded(child: SizedBox()),
-        SvgPicture.asset("assets/images/svgs/arrow-right.svg")
+        SvgPicture.asset("assets/images/svgs/arrow-right.svg", color: color)
       ],
     );
   }

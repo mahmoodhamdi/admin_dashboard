@@ -1,6 +1,5 @@
-import 'package:admin_dashboard/features/home/presentaion/models/all_expenses_item_model.dart';
 import 'package:admin_dashboard/features/home/presentaion/widgets/all_expenses_header.dart';
-import 'package:admin_dashboard/features/home/presentaion/widgets/all_expenses_item.dart';
+import 'package:admin_dashboard/features/home/presentaion/widgets/all_expensess_listview.dart';
 import 'package:flutter/material.dart';
 
 class AllExpenses extends StatelessWidget {
@@ -8,16 +7,11 @@ class AllExpenses extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
       children: [
-        const AllExpensesHeader(),
-        AllExpensesItem(
-          allExpensesItemModel: AllExpensesItemModel(
-              title: "title",
-              subtitle: "subtitle",
-              image: "assets/images/svgs/moneys.svg",
-              amount: '\$20,129'),
-        ),
+        AllExpensesHeader(),
+        SizedBox(height: 16),
+        AllExpensesListview()
       ],
     );
   }
