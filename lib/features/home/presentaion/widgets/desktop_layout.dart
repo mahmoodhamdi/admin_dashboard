@@ -1,3 +1,4 @@
+import 'package:admin_dashboard/features/home/presentaion/widgets/all_expensess.dart';
 import 'package:admin_dashboard/features/home/presentaion/widgets/custom_drawer.dart';
 import 'package:flutter/material.dart';
 
@@ -7,7 +8,11 @@ class DesktopLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Row(
-      children: [Expanded(child: CustomDrawer())],
+      children: [
+        Expanded(child: CustomDrawer()),
+        SizedBox(width: 32),
+        Expanded(flex: 2, child: Column(children: [AllExpenses()]))
+      ],
     );
   }
 }
