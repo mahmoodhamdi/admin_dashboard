@@ -20,6 +20,7 @@ class DesktopLayout extends StatelessWidget {
               AllExpenses(),
               SizedBox(height: 24),
               QuickInvoice(),
+              
             ],
           ),
         ),
