@@ -15,6 +15,7 @@ class DesktopLayout extends StatelessWidget {
         Expanded(
           flex: 2,
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               AllExpenses(),
               SizedBox(height: 24),

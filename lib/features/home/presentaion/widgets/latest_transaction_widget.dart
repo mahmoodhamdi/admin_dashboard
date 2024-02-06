@@ -1,4 +1,5 @@
 import 'package:admin_dashboard/core/utils/styles.dart';
+import 'package:admin_dashboard/features/home/presentaion/widgets/latest_transactions_listview.dart';
 import 'package:flutter/material.dart';
 
 class LatestTransaction extends StatelessWidget {
@@ -8,9 +9,11 @@ class LatestTransaction extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text("Latest Transaction", style: AppStyles.font16Medium),
         SizedBox(height: 16),
+        LatestTransactionsListview()
       ],
     );
   }
