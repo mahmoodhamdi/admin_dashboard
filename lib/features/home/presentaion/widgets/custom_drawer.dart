@@ -1,5 +1,6 @@
 import 'package:admin_dashboard/core/utils/app_images.dart';
 import 'package:admin_dashboard/features/home/presentaion/models/drawer_item_model.dart';
+import 'package:admin_dashboard/features/home/presentaion/models/user_info_model.dart';
 import 'package:admin_dashboard/features/home/presentaion/widgets/drawer_items_listview.dart';
 import 'package:admin_dashboard/features/home/presentaion/widgets/inactive_drawer_item.dart';
 import 'package:admin_dashboard/features/home/presentaion/widgets/user_info_listile.dart';
@@ -9,14 +10,17 @@ class CustomDrawer extends StatelessWidget {
   const CustomDrawer({super.key});
   @override
   Widget build(BuildContext context) {
+    UserInfoModel userInfoModel = UserInfoModel(
+      title: 'Lekan Okeowo',
+      subtitle: 'demo@gmail.com',
+      image: Assets.user1,
+    );
     return Container(
       child: CustomScrollView(
         slivers: [
-          const SliverToBoxAdapter(
+          SliverToBoxAdapter(
             child: UserInfoListile(
-              title: 'Lekan Okeowo',
-              subtitle: 'demo@gmail.com',
-              image: Assets.user1,
+              userInfoModel: userInfoModel,
             ),
           ),
           const SliverToBoxAdapter(

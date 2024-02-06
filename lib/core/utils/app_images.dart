@@ -1,5 +1,6 @@
 class Assets {
   Assets._();
+  static const String add = "assets/images/svgs/add.svg";
 
   /// Assets for CardReceive
   /// assets/images/svgs/card-receive.svg
