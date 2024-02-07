@@ -28,7 +28,7 @@ class Assets {
 
   /// Assets for Mask
   /// assets/images/svgs/mask.svg
-  static const String mask = "assets/images/svgs/mask.svg";
+  static const String mask = "assets/images/pngs/Mask.png";
 
   /// Assets for Moneys
   /// assets/images/svgs/moneys.svg
