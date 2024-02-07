@@ -10,9 +10,12 @@ class MyCardTransactionHistoryAndIncomeSection extends StatelessWidget {
     return const Column(children: [
       MyCardTransactionHistorySection(),
       SizedBox(height: 24),
-      IncomeSection(),
-       
-      
+      Expanded(child: Row(
+        children: [
+          Expanded(child: IncomeSection()),
+        ],
+      )),
+
     ]);
   }
 }

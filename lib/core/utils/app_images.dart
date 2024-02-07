@@ -26,6 +26,8 @@ class Assets {
   /// assets/images/svgs/logout.svg
   static const String logout = "assets/images/svgs/logout.svg";
 
+  static const String arrowDown = "assets/images/svgs/arrow-down.svg";
+
   /// Assets for Mask
   /// assets/images/svgs/mask.svg
   static const String mask = "assets/images/pngs/Mask.png";
