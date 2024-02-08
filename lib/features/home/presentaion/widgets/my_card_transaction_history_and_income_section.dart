@@ -8,14 +8,10 @@ class MyCardTransactionHistoryAndIncomeSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Column(children: [
+      SizedBox(height: 40),
       MyCardTransactionHistorySection(),
       SizedBox(height: 24),
-      Expanded(child: Row(
-        children: [
-          Expanded(child: IncomeSection()),
-        ],
-      )),
-
+      Expanded(child: IncomeSection()),
     ]);
   }
 }
