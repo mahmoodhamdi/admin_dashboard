@@ -31,6 +31,12 @@ abstract class AppStyles {
     fontWeight: FontWeight.w600,
     height: 0,
   );
+  static const TextStyle font20Bold = TextStyle(
+    color: Color(0xFF4EB7F2),
+    fontSize: 20,
+    fontWeight: FontWeight.w600,
+    height: 0,
+  );
   static const TextStyle font12Regular = TextStyle(
     color: Color(0xFFAAAAAA),
     fontSize: 12,

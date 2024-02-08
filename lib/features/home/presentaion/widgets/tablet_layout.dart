@@ -1,8 +1,6 @@
 import 'package:admin_dashboard/features/home/presentaion/widgets/all_expenses_and_quick_invoice_section.dart';
 import 'package:admin_dashboard/features/home/presentaion/widgets/custom_drawer.dart';
-import 'package:admin_dashboard/features/home/presentaion/widgets/income_section.dart';
 import 'package:admin_dashboard/features/home/presentaion/widgets/my_card_transaction_history_and_income_section.dart';
-import 'package:admin_dashboard/features/home/presentaion/widgets/my_card_transaction_history_section.dart';
 import 'package:flutter/material.dart';
 
 class TabletLayout extends StatelessWidget {
@@ -19,8 +17,12 @@ class TabletLayout extends StatelessWidget {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                AllExpensesAndQuickInvoiceSection(),
-                MyCardTransactionHistoryAndIncomeSection()],
+                Padding(
+                  padding: EdgeInsets.only(top: 40.0),
+                  child: AllExpensesAndQuickInvoiceSection(),
+                ),
+                MyCardTransactionHistoryAndIncomeSection()
+              ],
             ),
           ),
         ),

@@ -12,13 +12,14 @@ class IncomeSection extends StatelessWidget {
     return const BackgroundContainer(
       child: Column(children: [
         IncomeHeader(),
-        SingleChildScrollView(
-          child: Row(crossAxisAlignment: CrossAxisAlignment.center, children: [
+        Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
             Expanded(child: IncomeChart()),
             Expanded(
               child: IncomeDetails(),
-            )
-          ]),
+            ),
+          ],
         ),
       ]),
     );
