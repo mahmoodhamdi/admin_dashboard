@@ -29,9 +29,9 @@ class TransactionHistorySection extends StatelessWidget {
       Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          const Text("Transaction History", style: AppStyles.font20SemiBold),
+            Text("Transaction History", style: AppStyles.font20SemiBold(context)),
           Text("See All",
-              style: AppStyles.font16Medium
+              style: AppStyles.font16Medium(context)
                   .copyWith(color: const Color(0xFF4DB7F2))),
         ],
       ),
@@ -40,7 +40,8 @@ class TransactionHistorySection extends StatelessWidget {
       ),
       Text("13 April 2022",
           style:
-              AppStyles.font16Medium.copyWith(color: const Color(0xffAAAAAA))),
+              AppStyles.font16Medium(context)
+              .copyWith(color: const Color(0xffAAAAAA))),
       TransactionHistoryListview(
         transactionModelsList: transactionModelsList,
       )

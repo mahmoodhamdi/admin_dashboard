@@ -13,7 +13,7 @@ class ActiveDrawerItem extends StatelessWidget {
     return ListTile(
       title: Text(
         drawerItemModel.title,
-        style: AppStyles.font16Bold,
+        style: AppStyles.font16Bold(context),
       ),
       leading: SvgPicture.asset(drawerItemModel.image),
       trailing: Container(

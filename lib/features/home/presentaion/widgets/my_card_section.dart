@@ -48,7 +48,7 @@ class _MyCardSectionState extends State<MyCardSection> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Text("My Cards", style: AppStyles.font20SemiBold),
+        Text("My Cards", style: AppStyles.font20SemiBold(context)),
         const SizedBox(height: 20),
         MyCardsPageView(
           cardModelsList: MyCardSection.cardModelsList,

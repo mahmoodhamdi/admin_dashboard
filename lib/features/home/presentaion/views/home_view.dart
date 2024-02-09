@@ -28,7 +28,7 @@ class _HomeViewState extends State<HomeView> {
                 },
                 icon: const Icon(Icons.menu, color: Color(0xFF4DB7F2)),
               ),
-              title: const Text('Dashboard', style: AppStyles.font20Bold),
+              title:  Text('Dashboard', style: AppStyles.font20Bold(context)),
               centerTitle: true,
               backgroundColor: const Color(0xFFF7F9FA),
               elevation: 0,

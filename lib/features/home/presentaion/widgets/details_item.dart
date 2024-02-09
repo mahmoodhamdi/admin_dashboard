@@ -10,11 +10,11 @@ class DetailsItem extends StatelessWidget {
     return ListTile(
       title: Text(
         detailsModel.title,
-        style: AppStyles.font16Regular,
+        style: AppStyles.font16Regular(context),
       ),
       trailing: Text(
         detailsModel.value,
-        style: AppStyles.font16Medium,
+        style: AppStyles.font16Medium(context),
       ),
       leading: Container(
         width: 12,

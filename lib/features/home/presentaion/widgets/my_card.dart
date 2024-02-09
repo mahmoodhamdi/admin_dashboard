@@ -27,7 +27,7 @@ class MyCard extends StatelessWidget {
               minVerticalPadding: 16,
               title: Text(
                 cardModel.bank,
-                style: AppStyles.font16Regular
+                style: AppStyles.font16Regular(context)
                     .copyWith(color: const Color(0xFFFFFFFF)),
               ),
               subtitle: Padding(
@@ -35,7 +35,7 @@ class MyCard extends StatelessWidget {
                 child: Text(
                   cardModel.name,
                   maxLines: 1,
-                  style: AppStyles.font20Medium,
+                  style: AppStyles.font20Medium(context),
                 ),
               ),
               trailing: SvgPicture.asset(Assets.gallery)),
@@ -45,13 +45,13 @@ class MyCard extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
-                Text(cardModel.number, style: AppStyles.font24SemiBold),
+                Text(cardModel.number, style: AppStyles.font24SemiBold(context)),
                 const SizedBox(
                   height: 16,
                 ),
                 Text(
                   cardModel.date,
-                  style: AppStyles.font16Regular
+                  style: AppStyles.font16Regular(context)
                       .copyWith(color: const Color(0xFFFFFFFF)),
                 ),
               ],

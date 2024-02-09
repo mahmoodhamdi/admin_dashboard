@@ -35,7 +35,7 @@ class _DetailedIncomeChartState extends State<DetailedIncomeChart> {
             value: 40,
             titlePositionPercentageOffset: activeIndex == 0 ? 1.4 : null,
             title: activeIndex == 0 ? "Design service" : "40%",
-            titleStyle: AppStyles.font16SemiBold.copyWith(
+            titleStyle: AppStyles.font16SemiBold(context).copyWith(
               color: activeIndex == 0 ? null : Colors.white,
             ),
             radius: activeIndex == 0 ? 60 : 50,
@@ -45,14 +45,14 @@ class _DetailedIncomeChartState extends State<DetailedIncomeChart> {
             titlePositionPercentageOffset: activeIndex == 1 ? 2.3 : null,
             title: activeIndex == 1 ? "Design product" : "25%",
             value: 25,
-            titleStyle: AppStyles.font16SemiBold.copyWith(
+            titleStyle: AppStyles.font16SemiBold(context).copyWith(
               color: activeIndex == 1 ? null : Colors.white,
             ),
             radius: activeIndex == 1 ? 60 : 50,
             color: const Color(0xFF4EB7F2),
           ),
           PieChartSectionData(
-            titleStyle: AppStyles.font16SemiBold.copyWith(
+            titleStyle: AppStyles.font16SemiBold(context).copyWith(
               color: activeIndex == 2 ? null : Colors.white,
             ),
             titlePositionPercentageOffset: activeIndex == 2 ? 1.3 : null,
@@ -62,7 +62,7 @@ class _DetailedIncomeChartState extends State<DetailedIncomeChart> {
             color: const Color(0xFF064061),
           ),
           PieChartSectionData(
-            titleStyle: AppStyles.font16SemiBold.copyWith(
+            titleStyle: AppStyles.font16SemiBold(context).copyWith(
               color: activeIndex == 3 ? null : Colors.white,
             ),
             titlePositionPercentageOffset: activeIndex == 3 ? 1.5 : null,

@@ -17,13 +17,13 @@ class RangeOptions extends StatelessWidget {
           borderRadius: BorderRadius.circular(12),
         ),
       ),
-      child: const Row(children: [
+      child: Row(children: [
         Text(
           "Monthly",
-          style: AppStyles.font16Medium,
+          style: AppStyles.font16Medium(context),
         ),
-        SizedBox(width: 18),
-        Icon(Icons.arrow_drop_down_outlined)
+        const SizedBox(width: 18),
+        const Icon(Icons.arrow_drop_down_outlined)
       ]),
     );
   }

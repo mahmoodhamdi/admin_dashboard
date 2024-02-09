@@ -11,7 +11,7 @@ class IncomeHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-      const Text('Income', style: AppStyles.font20SemiBold),
+      Text('Income', style: AppStyles.font20SemiBold(context)),
       Container(
           padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
           decoration: ShapeDecoration(
@@ -21,7 +21,7 @@ class IncomeHeader extends StatelessWidget {
           )),
           child: Row(
             children: [
-              const Text('Monthly', style: AppStyles.font16Medium),
+              Text('Monthly', style: AppStyles.font16Medium(context)),
               const SizedBox(width: 16),
               SvgPicture.asset(Assets.arrowDown)
             ],
