@@ -18,10 +18,9 @@ class _HomeViewState extends State<HomeView> {
   final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey();
   @override
   Widget build(BuildContext context) {
-    SizeConfig.init(context);
     return Scaffold(
       key: scaffoldKey,
-      appBar: SizeConfig.width < SizeConfig.tablet
+      appBar: MediaQuery.of(context).size.width < SizeConfig.tablet
           ? AppBar(
               leading: IconButton(
                 onPressed: () {
@@ -36,7 +35,7 @@ class _HomeViewState extends State<HomeView> {
             )
           : null,
       drawer:
-          SizeConfig.width < SizeConfig.tablet ? const CustomDrawer() : null,
+          MediaQuery.of(context).size.width < SizeConfig.tablet ? const CustomDrawer() : null,
       backgroundColor: const Color(0xFFF7F9FA),
       body: AdaptiveLayout(
         mobileLayout: (context) => const MobileLayout(),
