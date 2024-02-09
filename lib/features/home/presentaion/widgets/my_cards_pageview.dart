@@ -21,5 +21,3 @@ class MyCardsPageView extends StatelessWidget {
         });
   }
 }
-
-int selectedIndex = 0;

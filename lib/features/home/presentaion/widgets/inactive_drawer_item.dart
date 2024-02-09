@@ -14,9 +14,13 @@ class InactiveDrawerItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      title: Text(
-        drawerItemModel.title,
-        style: AppStyles.font16Medium(context),
+      title: FittedBox(
+        fit: BoxFit.scaleDown,
+        alignment: AlignmentDirectional.centerStart,
+        child: Text(
+          drawerItemModel.title,
+          style: AppStyles.font16Medium(context),
+        ),
       ),
       leading: SvgPicture.asset(drawerItemModel.image),
     );

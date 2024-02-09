@@ -24,7 +24,7 @@ class MyCard extends StatelessWidget {
         child: Column(crossAxisAlignment: CrossAxisAlignment.end, children: [
           ListTile(
               contentPadding: const EdgeInsets.only(right: 41.5, left: 31),
-              minVerticalPadding: 16,
+              minVerticalPadding: 8,
               title: Text(
                 cardModel.bank,
                 style: AppStyles.font16Regular(context)
@@ -45,7 +45,8 @@ class MyCard extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
-                Text(cardModel.number, style: AppStyles.font24SemiBold(context)),
+                Text(cardModel.number,
+                    style: AppStyles.font24SemiBold(context)),
                 const SizedBox(
                   height: 16,
                 ),
@@ -57,9 +58,7 @@ class MyCard extends StatelessWidget {
               ],
             ),
           ),
-          const SizedBox(
-            height: 29,
-          )
+          const SizedBox()
         ]),
       ),
     );
