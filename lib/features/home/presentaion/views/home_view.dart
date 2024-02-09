@@ -1,3 +1,4 @@
+import 'package:admin_dashboard/core/utils/size_config.dart';
 import 'package:admin_dashboard/core/utils/styles.dart';
 import 'package:admin_dashboard/features/home/presentaion/widgets/adaptive_layout.dart';
 import 'package:admin_dashboard/features/home/presentaion/widgets/custom_drawer.dart';
@@ -17,9 +18,10 @@ class _HomeViewState extends State<HomeView> {
   final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey();
   @override
   Widget build(BuildContext context) {
+    SizeConfig.init(context);
     return Scaffold(
       key: scaffoldKey,
-      appBar: MediaQuery.of(context).size.width < 900
+      appBar: SizeConfig.width < SizeConfig.tablet
           ? AppBar(
               leading: IconButton(
                 onPressed: () {
@@ -34,7 +36,7 @@ class _HomeViewState extends State<HomeView> {
             )
           : null,
       drawer:
-          MediaQuery.of(context).size.width < 900 ? const CustomDrawer() : null,
+          SizeConfig.width < SizeConfig.tablet ? const CustomDrawer() : null,
       backgroundColor: const Color(0xFFF7F9FA),
       body: AdaptiveLayout(
         mobileLayout: (context) => const MobileLayout(),
