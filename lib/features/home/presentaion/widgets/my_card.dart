@@ -25,17 +25,21 @@ class MyCard extends StatelessWidget {
           ListTile(
               contentPadding: const EdgeInsets.only(right: 41.5, left: 31),
               minVerticalPadding: 8,
-              title: Text(
-                cardModel.bank,
-                style: AppStyles.font16Regular(context)
-                    .copyWith(color: const Color(0xFFFFFFFF)),
+              title: FittedBox(
+                fit: BoxFit.scaleDown,
+                child: Text(
+                  cardModel.bank,
+                  style: AppStyles.font16Regular(context)
+                      .copyWith(color: const Color(0xFFFFFFFF)),
+                ),
               ),
               subtitle: Padding(
                 padding: const EdgeInsets.only(top: 8.0),
-                child: Text(
-                  cardModel.name,
-                  maxLines: 1,
-                  style: AppStyles.font20Medium(context),
+                child: FittedBox(
+                  child: Text(
+                    cardModel.name,
+                    style: AppStyles.font20Medium(context),
+                  ),
                 ),
               ),
               trailing: SvgPicture.asset(Assets.gallery)),
@@ -45,15 +49,21 @@ class MyCard extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
-                Text(cardModel.number,
-                    style: AppStyles.font24SemiBold(context)),
+                FittedBox(
+                  fit: BoxFit.scaleDown,
+                  child: Text(cardModel.number,
+                      style: AppStyles.font24SemiBold(context)),
+                ),
                 const SizedBox(
                   height: 16,
                 ),
-                Text(
-                  cardModel.date,
-                  style: AppStyles.font16Regular(context)
-                      .copyWith(color: const Color(0xFFFFFFFF)),
+                FittedBox(
+                  fit: BoxFit.scaleDown,
+                  child: Text(
+                    cardModel.date,
+                    style: AppStyles.font16Regular(context)
+                        .copyWith(color: const Color(0xFFFFFFFF)),
+                  ),
                 ),
               ],
             ),
