@@ -17,9 +17,12 @@ class InactiveDrawerItem extends StatelessWidget {
       title: FittedBox(
         fit: BoxFit.scaleDown,
         alignment: AlignmentDirectional.centerStart,
-        child: Text(
-          drawerItemModel.title,
-          style: AppStyles.font16Medium(context),
+        child: FittedBox(
+          fit: BoxFit.scaleDown,
+          child: Text(
+            drawerItemModel.title,
+            style: AppStyles.font16Medium(context),
+          ),
         ),
       ),
       leading: SvgPicture.asset(drawerItemModel.image),
