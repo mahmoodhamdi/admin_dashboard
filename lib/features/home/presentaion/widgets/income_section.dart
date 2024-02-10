@@ -9,10 +9,13 @@ class IncomeSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const BackgroundContainer(
-      child: Column(children: [
-        IncomeHeader(),
-        IncomeSectionBody(),
-      ]),
+      
+      child: Column(
+        children: [
+          IncomeHeader(),
+          SizedBox(child: IncomeSectionBody()),
+        ],
+      ),
     );
   }
 }
