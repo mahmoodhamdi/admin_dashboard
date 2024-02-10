@@ -11,7 +11,7 @@ class AllExpensesItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
         decoration: ShapeDecoration(
           color: index == 0 ? const Color(0xFF4DB7F2) : Colors.white,
           shape: RoundedRectangleBorder(
@@ -26,30 +26,41 @@ class AllExpensesItem extends StatelessWidget {
           const SizedBox(
             height: 34,
           ),
-          Text(
-            allExpensesItemModel.title,
-            style: index == 0
-                ? AppStyles.font16SemiBold(context).copyWith(color: Colors.white)
-                : AppStyles.font16SemiBold(context),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              allExpensesItemModel.title,
+              style: index == 0
+                  ? AppStyles.font16SemiBold(context)
+                      .copyWith(color: Colors.white)
+                  : AppStyles.font16SemiBold(context),
+            ),
           ),
           const SizedBox(
             height: 8,
           ),
-          Text(
-            allExpensesItemModel.subtitle,
-            style: index == 0
-                ? AppStyles.font14Regular(context).copyWith(color: Colors.white)
-                : AppStyles.font14Regular(context),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              allExpensesItemModel.subtitle,
+              style: index == 0
+                  ? AppStyles.font14Regular(context)
+                      .copyWith(color: Colors.white)
+                  : AppStyles.font14Regular(context),
+            ),
           ),
           const SizedBox(
             height: 16,
           ),
-          Text(
-            allExpensesItemModel.amount,
-            style: index == 0
-                ? AppStyles.font24SemiBold(context)
-                : AppStyles.font24SemiBold(context)
-                    .copyWith(color: const Color(0xFF4DB7F2)),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              allExpensesItemModel.amount,
+              style: index == 0
+                  ? AppStyles.font24SemiBold(context)
+                  : AppStyles.font24SemiBold(context)
+                      .copyWith(color: const Color(0xFF4DB7F2)),
+            ),
           ),
         ]));
   }

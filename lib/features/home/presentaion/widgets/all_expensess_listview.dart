@@ -31,17 +31,14 @@ class AllExpensesListview extends StatelessWidget {
       children: allExpensesItemModelList
           .map(
             (e) => Expanded(
-              child: allExpensesItemModelList.indexOf(e) == 1
-                  ? Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 12.0),
-                      child: AllExpensesItem(
-                          index: allExpensesItemModelList.indexOf(e),
-                          allExpensesItemModel: e),
-                    )
-                  : AllExpensesItem(
-                      index: allExpensesItemModelList.indexOf(e),
-                      allExpensesItemModel: e),
-            ),
+                child: Padding(
+              padding: EdgeInsets.symmetric(
+                  horizontal:
+                      allExpensesItemModelList.indexOf(e) == 1 ? 12 : 0),
+              child: AllExpensesItem(
+                  index: allExpensesItemModelList.indexOf(e),
+                  allExpensesItemModel: e),
+            )),
           )
           .toList(),
     );
