@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 void main() => runApp(
       DevicePreview(
-        enabled: true,
+        enabled: false,
         builder: (context) => const AdminDashboard(), // Wrap your app
       ),
     );
@@ -16,9 +16,7 @@ class AdminDashboard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        locale: DevicePreview.locale(context),
-        builder: DevicePreview.appBuilder,
-        debugShowCheckedModeBanner: false,
+   debugShowCheckedModeBanner: false,
         title: 'Admin Dashboard',
         theme: ThemeData(fontFamily: "Montserrat"),
         home: const HomeView());
